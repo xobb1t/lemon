@@ -24,7 +24,7 @@ class Command(NoArgsCommand):
         self.remove_orphaned()
         print 'Done.'
 
-    def sync_metatag(self, model):
+    def sync_metatags(self, model):
         for obj in model.objects.all():
             try:
                 page = Page.objects.get_for_content_object(obj)
